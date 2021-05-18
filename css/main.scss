@@ -38,6 +38,16 @@ a {
     color: $white;
     display: table;
 }
+.ihk-button {
+    background-color: $secondary;
+    color: $white;
+    padding: 11px 42px;
+    border: 1px solid $secondary;
+    &:hover {
+        color: $secondary;
+        background-color: $white;
+    }
+}
 /*--- NAVBAR ---*/
 .ihk-navbar {
     padding: 0;
@@ -167,6 +177,9 @@ a {
                 padding-right: 2rem;
             }
         }
+        .nav-header {
+            display: none;
+        }
     }
 }
 @media (max-width: 575px) {
@@ -209,7 +222,49 @@ a {
 section {
     padding: 80px 0;
     position: relative;
+    .img-block {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .desc-bottom,
+    .desc-right {
+        margin-top: 20px;
+        h4 {
+            font-weight: 700;
+            font-family: $montserrat;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+            a {
+                color: #333;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+        h5 {
+            font-family: $montserrat;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+            a {
+                color: #333;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+    .desc-right {
+        margin-top: 0;
+        padding-left: 20px;
+        display: table-cell;
+        vertical-align: top;
+    }
 }
+
 #ihk-section__headline {
     position: relative;
     padding: 0;
@@ -475,12 +530,7 @@ section {
                 }
             }
             .desc-bottom {
-                margin-top: 20px;
                 h5 {
-                    font-family: $montserrat;
-                    font-weight: 700;
-                    font-size: 18px;
-                    margin-bottom: 15px;
                     a {
                         color: $secondary;
                         &:hover {
@@ -873,5 +923,96 @@ section {
 @media (max-width: 767px){
     .ihk-footer__top {
         padding: 40px 0;
+    }
+}
+/*--- HEADER ---*/ 
+.ihk-section__header {
+    background-image: url(../img/header.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h3 {
+        color: $white;
+        font-family: $montserrat;
+        font-weight: 600;
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    .ihk-breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        li {
+            padding: 0 3px;
+        }
+        li,
+        a {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+.ihk-activity__body {
+    .ihk-link__button {
+        display: table;
+        margin: 10px auto;
+        .ihk-button:first-child {
+            margin-right: 20px;
+        }
+    }
+}
+.ihk-activity__head .desc-bottom .date,
+.ihk-activity__body .desc-right .date {
+    color: #333;
+    margin-bottom: 10px;
+}
+.ihk-activity__head .desc-bottom p,
+.ihk-activity__body .desc-right p {
+    color: #555;
+    font-family: $poppins;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 42px;
+    overflow: hidden;
+}
+.ihk-activity__body .desc-right p {
+    -webkit-line-clamp: 3;
+    height: 63px;
+}
+.ihk-list {
+    margin-top: 30px;
+    li {
+        display: table;
+        padding: 30px 0;
+        border-top: 1px solid #DEDEDE;
+    }
+    .img-left {
+        width: 285px;
+        display: table-cell;
+        img {
+            width: 100%;
+        }
+    }
+}
+.ihk-activity__right {
+    h4 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 0;
+    }
+    .ihk-list {
+        margin-top: 0;
+        li {
+            border: none;
+            padding-bottom: 0;
+            h5 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .desc-bottom .date{
+        color: #666;
     }
 }
