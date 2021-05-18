@@ -43,32 +43,74 @@
                 </ul>
             </div>
             <div class="ihk-nav__list flex-grow-1 order-lg-2">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Activity</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Publication</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Database</a>
-                    </li>
-                </ul>
+                <div class="nav-header">
+                    <h5>Menu</h5>
+                    <button><img src="img/close.svg" width="25" alt=""></button>
+                </div>
+                <div class="nav-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Activity</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Publication</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Database</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
         </div>
         <!-- headline -->
         <section id="ihk-section__headline">
-            <img src="img/headline.png" alt="">
+            <div class="ihk-headline__slide slider">
+                <div class="ihk-slide__item">
+                    <img src="img/headline.png" alt="">
+                    <div class="container">
+                        <div class="ihk-headline__abs">
+                            <div class="ihk-headline__desc">
+                                <span>Event</span>
+                                <h1>Lorem Ipsum Dolor Sit Amet 1</h1>
+                                <p>
+                                    Donec id metus nec nisl fringilla ultricies in ut quam. Integer aliquam enim diam, 
+                                    quis egestas lacus ullamcorper id. 1
+                                </p>
+                                <a href="#">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ihk-slide__item">
+                    <img src="img/headline.png" alt="">
+                    <div class="container">
+                        <div class="ihk-headline__abs">
+                            <div class="ihk-headline__desc">
+                                <span>Event</span>
+                                <h1>Lorem Ipsum Dolor Sit Amet 2</h1>
+                                <p>
+                                    Donec id metus nec nisl fringilla ultricies in ut quam. Integer aliquam enim diam, 
+                                    quis egestas lacus ullamcorper id. 2
+                                </p>
+                                <a href="#">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- headline article -->
         <section id="ihk-section__headline_article">
@@ -319,7 +361,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ihk-gf__fb flex-grow-1 text-center">
+                    <div class="ihk-gf__fb flex-md-grow-1 text-center">
                         <div id="fb-root"></div>
                         <script src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v10.0"></script>
                         <div class="fb-page" data-href="https://www.facebook.com/KementerianLHK" data-tabs="timeline"
@@ -339,7 +381,7 @@
         <section id="ihk-section__ls" class="pt-0">
             <div class="container">
                 <div class="ihk-location">
-                    <h2 class="title-border title-border__center">LOKASI LEGIATAN FPIII</h2>
+                    <h2 class="title-border title-border__center">LOKASI KEGIATAN FPIII</h2>
                     <div class="mapouter">
                         <div class="gmap_canvas">
                             <iframe id="gmap_canvas"
@@ -355,29 +397,31 @@
                         <div class="col-md-3">
                             <h2 class="title-border">SPONSORED BY</h2>
                         </div>
-                        <div class="col-md-9 flex-grow-1">
-                            <ul class="ihk-sponsor__list list-unstyled">
-                                <li>
-                                    <a href="#">
-                                        <img src="img/sponsor1.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/sponsor2.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/sponsor3.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/sponsor4.png" alt="">
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="col-md-9 flex-lg-grow-1">
+                            <div class="ihk-sponsor__list">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/sponsor1.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/sponsor2.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/sponsor3.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/sponsor4.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

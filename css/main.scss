@@ -129,6 +129,23 @@ a {
             }
         }
     }
+    .nav-header {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #DEDEDE;
+        h5 {
+            font-size: 1.125rem;
+            color: $secondary;
+            margin-bottom: 0;
+            margin-right: auto;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+        }
+    }
 }
 @media (min-width: 992px) {
     .ihk-navbar {
@@ -149,6 +166,15 @@ a {
             &right {
                 padding-right: 2rem;
             }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .ihk-navbar .ihk-nav__logo a {
+        padding: 10px 20px;
+        img {
+            width: 175px;
+            margin-top: -5px;
         }
     }
 }
@@ -189,6 +215,84 @@ section {
     padding: 0;
     img {
         width: 100%;
+    }
+    .ihk-slide__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+    }
+    .container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // content: "";
+    }
+    .ihk-headline__abs {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        max-width: 590px;
+        display: flex;
+        align-items: center;
+    }
+    .ihk-headline__desc {
+        background-color: rgba(0, 52, 102, 0.8);
+        border-left: 3px solid $orange;
+        padding: 30px 35px;
+        color: $white;
+        span {
+            font-size: 14px;
+            display: table;
+            margin-bottom: .5rem;
+        }
+        h1 {
+            font-family: $montserrat;
+            font-weight: 600;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            height: 36px;
+            overflow: hidden;
+        }
+        a {
+            color: $orange;
+            font-size: 14px;
+            display: table;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    #ihk-section__headline{
+        .ihk-headline__abs {
+            max-width: 90%;
+        }
+        .ihk-headline__desc {
+            padding: 20px;
+            span {
+                margin-bottom: 5px;
+            }
+            h1 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 #ihk-section__headline_article {
@@ -276,17 +380,25 @@ section {
     }
 }
 @media (max-width: 767px) {
-    #ihk-section__headline_article .ihk-article__abs {
-        .deskrip__abs {
-            margin: 0 auto;
-            margin-top: -20px;
-        }
-        .img__right {
-            margin: 0 auto;
-            text-align: center;
-            img {
-                max-width: 80%;
+    section {
+        padding: 40px 0;
+    }
+    #ihk-section__headline_article {
+        .ihk-article__abs {
+            .deskrip__abs {
+                margin: 0 auto;
             }
+            .img__right {
+                margin: 0 auto;
+                text-align: center;
+                img {
+                    max-width: 80%;
+                }
+            }
+        }
+        &::before {
+            top: auto;
+            height: 160px;
         }
     }
 }
@@ -419,6 +531,14 @@ section {
         }
     }
 }
+@media (max-width: 575px) {
+    #ihk-section__ytb .ihk-ytb__header {
+        display: block;
+        .ytb-header__right {
+            margin-top: 15px;
+        }
+    }
+}
 /*--- LATEST ACTIVITY ---*/ 
 .title-border {
     font-size: 24px;
@@ -528,11 +648,12 @@ section {
     }
 }
 .ihk-gallery {
-    width: 894px;
+    max-width: 950px;
+    width: 100%;
     .ihk-gallery__item {
         position: relative;
         float: left;
-        width: 298px;
+        width: 33.33%;
         height: 298px;
         background-size: cover;
         background-position: center;
@@ -568,6 +689,37 @@ section {
         }
     }
 }
+@media (max-width: 1024px) {
+    .ihk-gallery {
+        .ihk-gallery__item{
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .ihk-gf__content {
+        display: block;
+        .ihk-gf__gallery {
+            margin-right: 0;
+            margin-bottom: 20px;
+            .ihk-gallery__item {
+                height: 255px;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .ihk-gf__content .ihk-gf__gallery {
+        .link-more {
+            margin-top: 10px;
+            margin-left: auto;
+        }
+        .ihk-gallery__item {
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
 /*--- LOCATION ---*/ 
 .ihk-location {
     .mapouter {
@@ -591,13 +743,32 @@ section {
 .ihk-sponsor {
     padding-top: 70px;
     .ihk-sponsor__list {
-        display: flex;
-        align-items: center;
-        margin: 0 -40px;
-        justify-content: flex-end;
-        li {
-            padding: 0 40px;
+        margin-left: auto;
+        display: table;
+        ul {
+            display: table;
+            margin: 0 -40px;
+            li {
+                padding: 0 40px;
+                display: inline-block;
+            }
         }
+    }
+}
+@media (max-width: 991px) {
+    .ihk-sponsor .ihk-sponsor__list {
+        ul {
+            text-align: center;
+            margin: 0;
+            li {
+                padding: 10px 25px;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .ihk-sponsor .title-border {
+        margin-bottom: 30px;
     }
 }
 /*--- INSTAGRAM ---*/ 
@@ -614,7 +785,8 @@ section {
 .ihk-instagram {
     display: flex;
     align-items: center;
-    width: 589px;
+    max-width: 589px;
+    width: 100%;
     margin: 0 auto;
     background-color: $white;
     border: 1px solid #DEDEDE;
@@ -696,5 +868,10 @@ section {
             display: block;
             text-align: center;
         }
+    }
+}
+@media (max-width: 767px){
+    .ihk-footer__top {
+        padding: 40px 0;
     }
 }
