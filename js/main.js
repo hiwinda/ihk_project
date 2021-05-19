@@ -17,7 +17,18 @@ $(document).ready(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		asNavFor: '.gallery-main',
-		focusOnSelect: true
+		centerMode: true,
+		focusOnSelect: true,
+		centerPadding: '0',
+		responsive: [
+			{
+			  breakpoint: 768,
+			  settings: {
+				centerMode: true,
+				slidesToShow: 3
+			  }
+			},
+		]
 	});
 	/*--- PUBLICATION SLICK ---*/
 	$('.ihk-publication__slide').slick({
