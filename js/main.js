@@ -1,4 +1,9 @@
 $(document).ready(function () {
+	/*--- SEARCH ---*/
+	$('#button_search').click(function(e){
+		var search = $(this).parent();
+		search.toggleClass("show");
+	});
 	/*--- HEADLINE SLICK ---*/
 	$('.ihk-headline__slide').slick({
 		arrows: false,

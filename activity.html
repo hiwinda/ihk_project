@@ -18,7 +18,8 @@
 <body>
     <div class="ihk-page__wrapper">
         <div class="ihk-navbar navbar navbar-expand-lg ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                 <span class="navbar-toggler-icon">
                     <img src="img/menu.svg" alt="" width="21">
                 </span>
@@ -30,15 +31,23 @@
             </div>
             <div class="ihk-nav__right order-lg-3">
                 <ul class="list-unstyled m-0">
-                    <li>
-                        <a href="#">
-                            <img src="img/search.svg" alt="">
+                    <li class="ihk-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search" placeholder="Search...">
+                        </div>
+                        <a href="#" id="button_search">
+                            <img src="img/search.svg" alt="" width="16" class="ic_search">
+                            <img src="img/close.svg" width="13" alt="" class="ic_close">
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="dropdown dropdown-language">
+                        <a class="dropdown-toggle" href="#" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="img/language.svg" alt="">
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Bahasa Indonesia</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -46,6 +55,11 @@
                 <div class="nav-header">
                     <h5>Menu</h5>
                     <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="nav-header-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
                 </div>
                 <div class="nav-body">
                     <ul class="navbar-nav">
