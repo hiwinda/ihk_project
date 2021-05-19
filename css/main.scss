@@ -1212,7 +1212,81 @@ section {
         margin-bottom: 40px;
     }
 }
+.ihk-gallery__content {
+    max-width: 795px;
+    width: 100%;
+    margin: 0 auto;
+    .link-back {
+        font-weight: 300;
+        color: #000;
+        display: table;
+        margin-bottom: 10px;
+    }
+}
+// slide
+.ihk-gallery__slide {
+    .gallery-main {
+        img {
+            width: 100%;
+        }
+        &__item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 486px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 15px;
+        }
+        &__desc {
+            color: $white;
+            font-weight: 300;
+        }
+    }
+    .gallery-nav {
+        margin: 0 -10px;
+        margin-top: 35px;
+        .slick-slide {
+            padding: 0 10px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+            &.slick-current {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .ihk-gallery__slide{
+        .gallery-main {
+            &__item {
+                height: 280px;
+            }
+        }
+    }
+}
 /*--- PUBLICATION ---*/ 
+#ihk-section__publication {
+    .ihk-sosmed__share {
+        display: table;
+        margin: 0 auto;
+    }
+}
 .ihk-publication__item {
     background-color: #F4F4F4;
     .ihk-publication__img {
@@ -1233,8 +1307,6 @@ section {
     }
 }
 .ihk-sosmed__share {
-    display: table;
-    margin: 0 auto;
     margin-top: 40px;
     .ihk-list__sosmed {
         .title {
