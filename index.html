@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/plugin.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
@@ -18,9 +18,9 @@
 <body>
     <div class="ihk-page__wrapper">
         <div class="ihk-navbar navbar navbar-expand-lg ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                 <span class="navbar-toggler-icon">
-                    <img src="img/menu.svg" alt="" width="25">
+                    <img src="img/menu.svg" alt="" width="21">
                 </span>
             </button>
             <div class="ihk-nav__logo order-lg-1">
@@ -42,10 +42,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="ihk-nav__list flex-grow-1 order-lg-2">
+            <div class="ihk-nav__list flex-grow-1 order-lg-2 offcanvas offcanvas-collapse" id="offcanvasWithBackdrop">
                 <div class="nav-header">
                     <h5>Menu</h5>
-                    <button><img src="img/close.svg" width="25" alt=""></button>
+                    <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="nav-body">
                     <ul class="navbar-nav">
@@ -173,7 +173,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="ihk-ytb__item">
-                                <a href="#">
+                                <a href="#" class="img-block">
                                     <img src="img/ytb1.png" alt="">
                                 </a>
                                 <div class="desc-bottom">
@@ -201,7 +201,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="ihk-ytb__item">
-                                <a href="#">
+                                <a href="#" class="img-block">
                                     <img src="img/ytb2.png" alt="">
                                 </a>
                                 <div class="desc-bottom">
@@ -227,7 +227,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="ihk-ytb__item">
-                                <a href="#">
+                                <a href="#" class="img-block">
                                     <img src="img/ytb3.png" alt="">
                                 </a>
                                 <div class="desc-bottom">
@@ -273,10 +273,10 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="ihk-la__item">
-                                        <a href="#">
+                                        <a href="#" class="img-block">
                                             <img src="img/la1.png" alt="">
                                         </a>
-                                        <div class="deskrip-bottom">
+                                        <div class="desc-bottom">
                                             <h5><a href="">Budidaya Ikan di Desa Nanga Betung</a></h5>
                                             <span class="date">4/5/2021</span>
                                         </div>
@@ -284,10 +284,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="ihk-la__item">
-                                        <a href="#">
+                                        <a href="#" class="img-block">
                                             <img src="img/la2.png" alt="">
                                         </a>
-                                        <div class="deskrip-bottom">
+                                        <div class="desc-bottom">
                                             <h5><a href="">Budidaya Ikan di Desa Nanga Betung</a></h5>
                                             <span class="date">4/5/2021</span>
                                         </div>
@@ -295,10 +295,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="ihk-la__item">
-                                        <a href="#">
+                                        <a href="#" class="img-block">
                                             <img src="img/la3.png" alt="">
                                         </a>
-                                        <div class="deskrip-bottom">
+                                        <div class="desc-bottom">
                                             <h5><a href="">Budidaya Ikan di Desa Nanga Betung</a></h5>
                                             <span class="date">4/5/2021</span>
                                         </div>
@@ -484,13 +484,13 @@
             <div class="ihk-footer__top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <a href="#">
+                        <div class="col-lg-3 col-sm-6">
+                            <a href="#" class="ihk-footer__logo">
                                 <img src="img/logo_footer.png" alt="" width="230">
                             </a>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <h5>ADDRESS</h5>
+                        <div class="col-lg-3 col-sm-6">
+                            <h5 class="ihk-footer__address">ADDRESS</h5>
                             <p>
                                 PISU Jakarta Office<br/>
                                 Manggala Wanabakti, Block 4,<br/>
@@ -499,15 +499,15 @@
                                 DKI Jakarta
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6">
                             <h5>CONTACT</h5>
                             <p>Email: lhk@mail.com</p>
                             <p>Phone: +6281 56546540</p>
                             <p>Jane Doe, Project Admin</p>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6">
                             <h5>SOCIAL MEDIA</h5>
-                            <ul class="ihk-footer__sosmed list-unstyled">
+                            <ul class="ihk-list__sosmed list-unstyled">
                                 <li>
                                     <a href="#"><img src="img/ic_fb.svg" alt=""></a>
                                 </li>
