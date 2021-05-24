@@ -43,6 +43,7 @@ a {
     color: $white;
     padding: 11px 42px;
     border: 1px solid $secondary;
+    display: inline-block;
     &:hover {
         color: $secondary;
         background-color: $white;
@@ -444,7 +445,7 @@ section {
         vertical-align: top;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     section .desc-right {
         margin-top: 20px;
         display: block;
@@ -1240,17 +1241,23 @@ section {
         }
     }
 }
+@media (min-width: 992px) {
+    .ihk-activity__right {
+        max-width: 387px;
+        margin-left: auto;
+    }
+}
 @media (max-width: 991px) {
     .ihk-list .img-left {
-        width: 50%;
+        display: table;
+        width: 70%;
     }
 }
 @media (max-width: 767px) {
     .ihk-activity__body .ihk-link__button {
-        margin-bottom: 40px;
+        margin-bottom: 46px;
     }
     .ihk-list .img-left {
-        display: block;
         width: 100%;
     }
     .ihk-sosmed__share {
@@ -1480,5 +1487,33 @@ section {
     .slick-slide img {
         display: inline;
         max-width: 100%;
+    }
+}
+/*--- search result ---*/ 
+.ihk-search__form {
+    max-width: 590px;
+    margin: 0 auto;
+    .form-control {
+        padding: .75rem 1.25rem;
+        font-family: $poppins;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}
+.ihk-activity__body_search{
+    > h4 {
+        color: #333;
+        margin-bottom: 5px;
+    }
+    > span {
+        color: #777;
+    }
+    .ihk-list {
+        margin-top: 0;
+        li {
+            &:first-child {
+                border-top: none;
+            }
+        }
     }
 }
