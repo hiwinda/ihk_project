@@ -1139,6 +1139,10 @@ section {
         border-top: 92px solid $orange;
         border-left: 40px solid transparent;
     }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
     h3 {
         color: $white;
         font-family: $montserrat;
@@ -1498,6 +1502,11 @@ section {
         font-family: $poppins;
         font-size: 14px;
         border-radius: 8px;
+        &:focus,
+        &:hover {
+            outline: none;
+            box-shadow: none;
+        }
     }
 }
 .ihk-activity__body_search{
